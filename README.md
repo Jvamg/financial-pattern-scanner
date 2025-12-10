@@ -36,19 +36,14 @@ financial-pattern-scanner/
 ```
 ## 🚀 Como Executar
 1. **Instalação:**  
-Clone o repositório e instale as dependências:
+Clone o repositório e instale as dependências. Nota: A biblioteca pandas-ta já está incluída no projeto para evitar erros de compatibilidade.
 
 ```bash
-
 git clone [https://github.com/Jvamg/financial-pattern-scanner.git](https://github.com/Jvamg/financial-pattern-scanner.git)
 cd financial-pattern-scanner
 pip install -r requirements.txt
 ```
-Nota: Se tiver problemas com o pandas-ta, instale a versão de desenvolvimento:
 
-```bash
-pip install git+https://github.com/twopirllc/pandas-ta.git@development
-```
 
 2. **Gerar Padrões (`Scanner`):**  
 Execute o gerador para escanear os ativos configurados. Ele baixará os dados e aplicará as regras matemáticas.
@@ -63,28 +58,25 @@ Isso criará um arquivo CSV em data/datasets/dataset_patterns.csv.
 Abra a interface gráfica para validar os padrões encontrados pelo robô:
 
 ```bash
-
 python tools/labeler.py
 ```
 
 **Comandos na Interface:**
 
-```text
-[A] ou [Seta Direita]: Aprovar Padrão (Válido)
+`[A]` ou `[Seta Direita]`: Aprovar Padrão (Válido)
 
-[R]: Rejeitar Padrão (Inválido)
+`[R]`: Rejeitar Padrão (Inválido)
 
-[Q]: Sair e Salvar
-```
+`[Q]`: Sair e Salvar
 
 ## ⚙️ Calibração e Configuração
 Você pode ajustar a sensibilidade do robô no arquivo config.py:
 
-*ZIGZAG_STRATEGIES*: Ajuste a profundidade (depth) e desvio (deviation) para pegar movimentos maiores ou menores.
+`ZIGZAG_STRATEGIES`: Ajuste a profundidade (depth) e desvio (deviation) para pegar movimentos maiores ou menores.
 
-*SCORE_WEIGHTS*: Defina o peso de cada regra (ex: simetria vale 10 pts, RSI vale 15 pts).
+`SCORE_WEIGHTS`: Defina o peso de cada regra (ex: simetria vale 10 pts, RSI vale 15 pts).
 
-*TOLERANCES*: Ajuste a rigidez geométrica (ex: o quão alinhados os ombros precisam estar).
+`TOLERANCES`: Ajuste a rigidez geométrica (ex: o quão alinhados os ombros precisam estar).
 
 ## ⚠️ Disclaimer
 Esta ferramenta é apenas para fins educacionais e de pesquisa quantitativa. Não constitui recomendação de investimento.
