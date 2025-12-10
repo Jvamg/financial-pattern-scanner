@@ -4,21 +4,14 @@ import argparse
 import logging
 import pandas as pd
 
-# ==============================================================================
-# 1. CORREÇÃO DE PATH (Executa IMEDIATAMENTE)
-# ==============================================================================
-# Pega o diretório atual (tools) e o pai (raiz do projeto)
 current_dir = os.path.dirname(os.path.abspath(__file__))
 project_root = os.path.dirname(current_dir)
 
-# Insere a raiz no topo da lista de busca do Python
 if project_root not in sys.path:
     sys.path.insert(0, project_root)
 
 print(f"--- DEBUG: Raiz do projeto configurada em: {project_root} ---")
-# ==============================================================================
 
-# Só agora tentamos importar os módulos do projeto
 try:
     from config import Config
     from src.data_loader import buscar_dados

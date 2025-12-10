@@ -70,7 +70,7 @@ class Config:
     HEAD_EXTREME_LOOKBACK_FACTOR = 1
     HEAD_EXTREME_LOOKBACK_MIN_BARS = 8
 
-    # Quantos padrões recentes analisar (EVITA O ERRO QUE DEU AGORA)
+    # Quantos padrões recentes analisar
     RECENT_PATTERNS_LOOKBACK_COUNT = 3
 
     # --- SISTEMA ---
