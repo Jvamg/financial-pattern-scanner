@@ -39,3 +39,7 @@ logs/*
 # Arquivos de sistema
 .DS_Store
 Thumbs.db
+
+# Pandas-ta
+!.venv\Lib\site-packages\pandas_ta
+!.venv\Lib\site-packages\pandas_ta-0.3.14b0.dist-info
