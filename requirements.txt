@@ -7,7 +7,7 @@ tzdata==2025.2
 
 # --- Finance & Technical Analysis ---
 yfinance==0.2.63
-pandas-ta
+# pandas-ta (Incluído localmente para compatibilidade)
 mplfinance==0.12.10b0
 
 # --- Visualization ---
