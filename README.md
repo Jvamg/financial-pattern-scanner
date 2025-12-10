@@ -33,6 +33,7 @@ financial-pattern-scanner/
 │   ├── generator.py    # Script que baixa dados e gera o dataset de candidatos
 │   └── labeler.py      # GUI para visualizar e validar os padrões
 └── data/               # Armazenamento de CSVs (Datasets)
+```
 🚀 Como Executar
 1. Instalação
 Clone o repositório e instale as dependências:
