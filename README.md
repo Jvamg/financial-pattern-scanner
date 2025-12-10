@@ -67,7 +67,7 @@ Abra a interface gráfica para validar os padrões encontrados pelo robô:
 python tools/labeler.py
 ```
 
-Comandos na Interface:
+**Comandos na Interface:**
 
 [A] ou [Seta Direita]: Aprovar Padrão (Válido)
 
@@ -78,11 +78,11 @@ Comandos na Interface:
 ## ⚙️ Calibração e Configuração
 Você pode ajustar a sensibilidade do robô no arquivo config.py:
 
-ZIGZAG_STRATEGIES: Ajuste a profundidade (depth) e desvio (deviation) para pegar movimentos maiores ou menores.
+*ZIGZAG_STRATEGIES*: Ajuste a profundidade (depth) e desvio (deviation) para pegar movimentos maiores ou menores.
 
-SCORE_WEIGHTS: Defina o peso de cada regra (ex: simetria vale 10 pts, RSI vale 15 pts).
+*SCORE_WEIGHTS*: Defina o peso de cada regra (ex: simetria vale 10 pts, RSI vale 15 pts).
 
-TOLERANCES: Ajuste a rigidez geométrica (ex: o quão alinhados os ombros precisam estar).
+*TOLERANCES*: Ajuste a rigidez geométrica (ex: o quão alinhados os ombros precisam estar).
 
 ## ⚠️ Disclaimer
 Esta ferramenta é apenas para fins educacionais e de pesquisa quantitativa. Não constitui recomendação de investimento.
