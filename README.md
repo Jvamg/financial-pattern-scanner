@@ -34,34 +34,39 @@ financial-pattern-scanner/
 │   └── labeler.py      # GUI para visualizar e validar os padrões
 └── data/               # Armazenamento de CSVs (Datasets)
 ```
-🚀 Como Executar
+## 🚀 Como Executar
 1. Instalação
 Clone o repositório e instale as dependências:
 
-Bash
+```bash
 
 git clone [https://github.com/Jvamg/financial-pattern-scanner.git](https://github.com/Jvamg/financial-pattern-scanner.git)
 cd financial-pattern-scanner
 pip install -r requirements.txt
+```
 Nota: Se tiver problemas com o pandas-ta, instale a versão de desenvolvimento:
 
+```bash
 pip install git+https://github.com/twopirllc/pandas-ta.git@development
+```
 
 2. Gerar Padrões (Scanner)
 Execute o gerador para escanear os ativos configurados. Ele baixará os dados e aplicará as regras matemáticas.
 
-Bash
-
+```bash
 # Exemplo: Escanear BTC e ETH usando a estratégia de Swing Trade
 python tools/generator.py --tickers BTC-USD,ETH-USD --strategies swing_short
+```
 Isso criará um arquivo CSV em data/datasets/dataset_patterns.csv.
 
 3. Visualizar e Rotular (Labeler)
 Abra a interface gráfica para validar os padrões encontrados pelo robô:
 
-Bash
+```bash
 
 python tools/labeler.py
+```
+
 Comandos na Interface:
 
 [A] ou [Seta Direita]: Aprovar Padrão (Válido)
@@ -70,7 +75,7 @@ Comandos na Interface:
 
 [Q]: Sair e Salvar
 
-⚙️ Calibração e Configuração
+## ⚙️ Calibração e Configuração
 Você pode ajustar a sensibilidade do robô no arquivo config.py:
 
 ZIGZAG_STRATEGIES: Ajuste a profundidade (depth) e desvio (deviation) para pegar movimentos maiores ou menores.
@@ -79,5 +84,5 @@ SCORE_WEIGHTS: Defina o peso de cada regra (ex: simetria vale 10 pts, RSI vale 1
 
 TOLERANCES: Ajuste a rigidez geométrica (ex: o quão alinhados os ombros precisam estar).
 
-⚠️ Disclaimer
+## ⚠️ Disclaimer
 Esta ferramenta é apenas para fins educacionais e de pesquisa quantitativa. Não constitui recomendação de investimento.
