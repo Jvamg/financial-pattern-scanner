@@ -1,5 +1,3 @@
-Markdown
-
 # Financial Pattern Scanner (Quantitative Analysis) 📈
 
 Um sistema modular de análise quantitativa em Python para detectar, validar e rotular padrões gráficos clássicos (OCO, Topo Duplo, Topo Triplo) em mercados financeiros, focado em Criptomoedas.
@@ -39,13 +37,19 @@ financial-pattern-scanner/
 1. Instalação
 Clone o repositório e instale as dependências:
 
-git clone [https://github.com/SEU_USUARIO/financial-pattern-scanner.git](https://github.com/SEU_USUARIO/financial-pattern-scanner.git)
+Bash
+
+git clone [https://github.com/Jvamg/financial-pattern-scanner.git](https://github.com/Jvamg/financial-pattern-scanner.git)
 cd financial-pattern-scanner
 pip install -r requirements.txt
-Nota: Se tiver problemas com o pandas-ta, instale a versão de desenvolvimento: pip install git+https://github.com/twopirllc/pandas-ta.git@development
+Nota: Se tiver problemas com o pandas-ta, instale a versão de desenvolvimento:
+
+pip install git+https://github.com/twopirllc/pandas-ta.git@development
 
 2. Gerar Padrões (Scanner)
 Execute o gerador para escanear os ativos configurados. Ele baixará os dados e aplicará as regras matemáticas.
+
+Bash
 
 # Exemplo: Escanear BTC e ETH usando a estratégia de Swing Trade
 python tools/generator.py --tickers BTC-USD,ETH-USD --strategies swing_short
@@ -53,6 +57,8 @@ Isso criará um arquivo CSV em data/datasets/dataset_patterns.csv.
 
 3. Visualizar e Rotular (Labeler)
 Abra a interface gráfica para validar os padrões encontrados pelo robô:
+
+Bash
 
 python tools/labeler.py
 Comandos na Interface:
