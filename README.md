@@ -35,7 +35,7 @@ financial-pattern-scanner/
 └── data/               # Armazenamento de CSVs (Datasets)
 ```
 ## 🚀 Como Executar
-1. Instalação
+1. **Instalação:**\n
 Clone o repositório e instale as dependências:
 
 ```bash
@@ -50,7 +50,7 @@ Nota: Se tiver problemas com o pandas-ta, instale a versão de desenvolvimento:
 pip install git+https://github.com/twopirllc/pandas-ta.git@development
 ```
 
-2. Gerar Padrões (Scanner)
+2. **Gerar Padrões (`Scanner`):**\n
 Execute o gerador para escanear os ativos configurados. Ele baixará os dados e aplicará as regras matemáticas.
 
 ```bash
@@ -59,7 +59,7 @@ python tools/generator.py --tickers BTC-USD,ETH-USD --strategies swing_short
 ```
 Isso criará um arquivo CSV em data/datasets/dataset_patterns.csv.
 
-3. Visualizar e Rotular (Labeler)
+3. **Visualizar e Rotular (`Labeler`):**\n
 Abra a interface gráfica para validar os padrões encontrados pelo robô:
 
 ```bash
