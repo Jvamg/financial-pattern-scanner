@@ -69,11 +69,13 @@ python tools/labeler.py
 
 **Comandos na Interface:**
 
+```text
 [A] ou [Seta Direita]: Aprovar Padrão (Válido)
 
 [R]: Rejeitar Padrão (Inválido)
 
 [Q]: Sair e Salvar
+```
 
 ## ⚙️ Calibração e Configuração
 Você pode ajustar a sensibilidade do robô no arquivo config.py:
