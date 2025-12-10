@@ -13,7 +13,6 @@ from colorama import Fore, Style, init
 # Inicializa colorama para logs coloridos
 init(autoreset=True)
 
-# Importações internas
 try:
     from config import Config
     from src.indicators import (

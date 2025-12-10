@@ -10,7 +10,6 @@ import time
 from datetime import datetime, timedelta
 from typing import Optional
 
-# Tenta importar config, mas define fallback caso rode isolado
 try:
     from config import Config
 except ImportError:
