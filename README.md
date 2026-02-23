@@ -58,7 +58,7 @@ Isso criará um arquivo CSV em data/datasets/dataset_patterns.csv.
 Abra a interface gráfica para validar os padrões encontrados pelo robô:
 
 ```bash
-python tools/labeler.py
+python -m tools.labeler
 ```
 
 **Comandos na Interface:**

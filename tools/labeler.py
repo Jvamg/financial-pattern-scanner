@@ -3,15 +3,15 @@ Ferramenta Gráfica de Rotulagem (Labeler).
 Permite visualizar padrões, aplicar zoom e classificar como Válido (1) ou Inválido (0).
 Uso: python tools/labeler.py
 """
-from typing import List, Dict, Any, Optional
-import matplotlib.pyplot as plt
-from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
-import pandas_ta as ta
 import mplfinance as mpf
 import numpy as np
 import pandas as pd
 from tkinter import messagebox
 import tkinter as tk
+import pandas_ta as ta
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+import matplotlib.pyplot as plt
+from typing import List, Dict, Any, Optional
 import sys
 import os
 
