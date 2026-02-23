@@ -35,6 +35,7 @@ data/datasets/*
 !data/datasets/.gitkeep
 logs/*
 !logs/.gitkeep
+.txt
 
 # Arquivos de sistema
 .DS_Store
