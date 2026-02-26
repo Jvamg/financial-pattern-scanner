@@ -19,8 +19,7 @@ try:
     from src.patterns import (
         identificar_padroes_hns,
         identificar_padroes_double_top_bottom,
-        identificar_padroes_ttb,
-        validate_and_score_triple_pattern
+        identificar_padroes_ttb
     )
 except ImportError as e:
     print("\nERRO CRÍTICO:")
@@ -119,11 +118,7 @@ def main():
                         padroes_run.extend(
                             identificar_padroes_double_top_bottom(pivots, df))
                     if 'ALL' in wanted_patterns or 'TTB' in wanted_patterns:
-                        cand_ttb = identificar_padroes_ttb(pivots)
-                        for cand in cand_ttb:
-                            res = validate_and_score_triple_pattern(cand, df)
-                            if res:
-                                padroes_run.append(res)
+                        padroes_run.extend(identificar_padroes_ttb(pivots, df))
 
                     if padroes_run:
                         logging.info(
