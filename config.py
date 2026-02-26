@@ -6,21 +6,53 @@ class Config:
 
     TICKERS = [
         'BTC-USD', 'ETH-USD', 'SOL-USD', 'ADA-USD', 'DOGE-USD',
-        'XRP-USD', 'LTC-USD', 'LINK-USD', 'MATIC-USD', 'DOT-USD'
+        'XRP-USD', 'LTC-USD', 'LINK-USD', 'DOT-USD'
     ]
 
     DATA_PERIOD = '2y'  # Período padrão (funciona bem para 1h e 1d)
 
     ZIGZAG_STRATEGIES = {
+        # ------- SCALPING (micro-estruturas) ----------
+        'scalping_aggressive': {
+            '5m':  {'depth': 3, 'deviation': 0.25}
+        },
+        'scalping_moderate': {
+            '5m':  {'depth': 4, 'deviation': 0.40},
+            '15m': {'depth': 5, 'deviation': 0.60}
+        },
+        'scalping_conservative': {
+            '5m':  {'depth': 5, 'deviation': 0.55},
+            '15m': {'depth': 6, 'deviation': 0.75}
+        },
+
+        # ------- INTRADAY (15m-1h) ----------
+        'intraday_momentum': {
+            '5m':  {'depth': 6, 'deviation': 0.80},
+            '15m': {'depth': 7, 'deviation': 1.10},
+            '1h':  {'depth': 8, 'deviation': 1.60}
+        },
+        'intraday_range': {
+            '5m':  {'depth': 7, 'deviation': 1.00},
+            '15m': {'depth': 8, 'deviation': 1.30},
+            '1h':  {'depth': 9, 'deviation': 1.90}
+        },
+
+        # ------- SWING (hor. de horas a dias) ----------
         'swing_short': {
             '15m': {'depth': 8,  'deviation': 2.0},
             '1h':  {'depth': 10, 'deviation': 2.8},
             '4h':  {'depth': 12, 'deviation': 4.0}
         },
-        'scalping': {
-            '5m':  {'depth': 5, 'deviation': 0.55},
-            '15m': {'depth': 6, 'deviation': 0.75}
-        }
+        'swing_medium': {
+            '1h':  {'depth': 10, 'deviation': 3.2},
+            '4h':  {'depth': 12, 'deviation': 4.8},
+            '1d':  {'depth': 10, 'deviation': 6.0}
+        },
+        'swing_long': {
+            '4h':  {'depth': 13, 'deviation': 5.0},
+            '1d':  {'depth': 12, 'deviation': 7.0},
+            '1wk': {'depth': 10, 'deviation': 8.5}
+        },
     }
 
     # --- PESOS E REGRAS ---
@@ -61,8 +93,8 @@ class Config:
     HEAD_SIGNIFICANCE_RATIO = 1.1
     SHOULDER_SYMMETRY_TOLERANCE = 0.30
     NECKLINE_FLATNESS_TOLERANCE = 0.25
-    NECKLINE_RETEST_ATR_MULTIPLIER = 2
-    DTB_SYMMETRY_TOLERANCE_FACTOR = 0.35
+    NECKLINE_RETEST_ATR_MULTIPLIER = 1.5
+    DTB_SYMMETRY_TOLERANCE_FACTOR = 0.2
     DTB_VALLEY_PEAK_DEPTH_RATIO = 0.1
     DTB_TREND_MIN_DIFF_FACTOR = 0.01
 
@@ -71,7 +103,7 @@ class Config:
     HEAD_EXTREME_LOOKBACK_MIN_BARS = 8
 
     # Quantos padrões recentes analisar
-    RECENT_PATTERNS_LOOKBACK_COUNT = 3
+    RECENT_PATTERNS_LOOKBACK_COUNT = 1
 
     # --- SISTEMA ---
     MAX_DOWNLOAD_TENTATIVAS = 3
