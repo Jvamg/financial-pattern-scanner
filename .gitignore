@@ -36,6 +36,7 @@ data/datasets/*
 logs/*
 !logs/.gitkeep
 .txt
+tools/labeler.py
 
 # Arquivos de sistema
 .DS_Store
